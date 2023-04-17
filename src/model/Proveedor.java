@@ -7,7 +7,7 @@ public class Proveedor {
 
     public Proveedor(String unNombre, float unPrecioEnvio) {
         nombre = unNombre;
-        precioEnvío = unPrecioEnvio = unPrecioEnvio;
+        precioEnvío = unPrecioEnvio;
     }
 
     public String getNombre() {
