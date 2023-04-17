@@ -11,36 +11,13 @@ import org.json.simple.parser.ParseException;
 
 
 public class LeerArchivo {
-    private String rutaProveedor;
-    private String rutaProducto;
-
     private ArrayList<Proveedor> proveedores;
     private ArrayList<Producto> productos;
 
 
     public LeerArchivo() {
-        rutaProducto = "";
-        rutaProveedor = "";
-        proveedores = new ArrayList<>();
-    }
-
-    public LeerArchivo(String unaRutaProveedor, String unaRutaProducto) {
-        rutaProveedor = unaRutaProveedor;
-        rutaProducto = unaRutaProducto;
         proveedores = new ArrayList<>();
         productos = new ArrayList<>();
-    }
-
-    public void setRutaProveedor(String unaRuta) {
-        if (unaRuta != null) {
-            rutaProveedor = unaRuta;
-        }
-    }
-
-    public void setRutaProducto(String unaRuta) {
-        if (unaRuta != null) {
-            rutaProducto = unaRuta;
-        }
     }
 
     /*
