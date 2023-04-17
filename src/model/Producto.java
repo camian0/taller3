@@ -27,6 +27,10 @@ public class Producto {
         return precioBase;
     }
 
+    public  Proveedor getProveedor(){
+        return proveedor;
+    }
+
     public void setNombre(String unNombre) {
         if (unNombre != null) {
             nombre = unNombre;
