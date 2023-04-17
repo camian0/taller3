@@ -1,9 +1,7 @@
 import model.Tienda;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -25,9 +23,9 @@ public class Main {
             String mensaje = tienda.buscarProductos(edad, precio);
             System.out.println(mensaje);
         } catch (IOException e) {
-            System.out.println("Verifica la ruta seleccionada.  \n" + e.getMessage() + "\n");
+            System.out.println("Verifica la ruta seleccionada, archivo no encontrado  \n" + e.getMessage() + "\n");
         } catch (ParseException e) {
-            System.out.println("Objeto no soportado para para agregar. \n" + e.getMessage() + "\n");
+            System.out.println("No se pudo leer el archivo JSON. \n" + e.getMessage() + "\n");
         }
     }
 }
