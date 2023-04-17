@@ -6,10 +6,13 @@ public class Producto {
     private Short edad;
     private Float precioBase;
 
-    public Producto(String unNombre, Short unaEdad, Float unPrecioBase) {
+    private Proveedor proveedor;
+
+    public Producto(String unNombre, Short unaEdad, Float unPrecioBase, Proveedor unProveedor) {
         nombre = unNombre;
         edad = unaEdad;
         precioBase = unPrecioBase;
+        proveedor = unProveedor;
     }
 
     public String getNombre() {
