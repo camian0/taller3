@@ -22,6 +22,9 @@ public class Tienda {
 
     public String buscarProductos(Short edad, Float precioMaximo) {
         ArrayList<Producto> cumplen = new ArrayList<>();
+        if (cumplen.size() == 0) {
+            return "No hay productos que cumplan con los criterios de búsqueda. Intenta con otro";
+        }
         if (edad != null || precioMaximo != null) {
             for (Producto producto : productos) {
                 Float total = producto.getPrecioBase() + producto.getProveedor().getPrecioEnvio();
