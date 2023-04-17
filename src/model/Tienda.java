@@ -24,7 +24,8 @@ public class Tienda {
         ArrayList<Producto> cumplen = new ArrayList<>();
         if (edad != null || precioMaximo != null) {
             for (Producto producto : productos) {
-                if (producto.getEdad().equals(edad) && producto.getPrecioBase() <= precioMaximo) {
+                Float total = producto.getPrecioBase() + producto.getProveedor().getPrecioEnvio();
+                if (producto.getEdad().equals(edad) && total <= precioMaximo) {
                     cumplen.add(producto);
                 }
             }
